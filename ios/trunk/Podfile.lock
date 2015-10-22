@@ -1,0 +1,50 @@
+PODS:
+  - AVOSCloud (3.1.5.1)
+  - BaiduMap-iOS-SDK (2.8.1.1)
+  - DACircularProgress (2.3.1)
+  - DZQQLib (2.8.1)
+  - iCarousel (1.8.2)
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MWPhotoBrowser (2.1.1):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
+  - ODRefreshControl (1.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (1.1.3)
+  - WeiboSDK (3.1.1)
+  - Weixin (1.5)
+
+DEPENDENCIES:
+  - AVOSCloud (~> 3.1.4)
+  - BaiduMap-iOS-SDK (~> 2.8.1.1)
+  - DZQQLib (~> 2.8.1)
+  - iCarousel (~> 1.8.2)
+  - Masonry (~> 0.6.3)
+  - MBProgressHUD (~> 0.9.1)
+  - MWPhotoBrowser (~> 2.1.1)
+  - ODRefreshControl (~> 1.2)
+  - SDWebImage (~> 3.7.3)
+  - SVProgressHUD (~> 1.1.3)
+  - WeiboSDK (~> 3.1.1)
+  - Weixin (~> 1.5)
+
+SPEC CHECKSUMS:
+  AVOSCloud: 02766b9bbe7202a44b8beaf52f585607d1a5ad25
+  BaiduMap-iOS-SDK: 32decf7234ced3bea0cc826b55628d78cdddb653
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DZQQLib: 3419d72f780ee1a116d26ae57ca4639185a0f4e1
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
+  ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  WeiboSDK: ebdd7db58670dc0f8a4389a0b9b3069bcbc1d034
+  Weixin: 078167ff244c56fa8352506420b6328a13a184a1
+
+COCOAPODS: 0.38.2

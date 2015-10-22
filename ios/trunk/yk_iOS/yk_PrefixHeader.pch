@@ -1,0 +1,39 @@
+//
+//  yk_PrefixHeader.pch
+//  yk_iOS
+//
+//  Created by chenhanlin on 15/10/8.
+//  Copyright © 2015年 yike. All rights reserved.
+//
+
+#ifndef yk_PrefixHeader_pch
+#define yk_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AppMacro.h"
+#import "NotificationMacro.h"
+#import "UtilsMacro.h"
+#import "VendorMacro.h"
+#import "UIColor+expanded.h"
+#import "UIBarButtonItem+Common.h"
+#import "UIView+Frame.h"
+#import "NSString+Common.h"
+#import "BaseViewController.h"
+#import <Masonry.h>
+#import "UserDefaultManager.h"
+#import <UIImageView+WebCache.h>
+#import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
+#import <BaiduMapAPI/BMKMapView.h>//只引入所需的单个头文件
+#import "AlertViewHelper.h"
+#import <AVOSCloud.h>
+#import "AVOSCloudHelper.h"
+#import "RoomModel.h"
+#import <UIImageView+WebCache.h>
+#import "UIScrollView+SVInfiniteScrolling.h"
+#import <MBProgressHUD.h>
+#import <ODRefreshControl.h>
+#import <SVProgressHUD.h>
+
+#endif /* yk_PrefixHeader_pch */

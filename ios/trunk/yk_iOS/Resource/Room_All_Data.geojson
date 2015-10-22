@@ -1,0 +1,10 @@
+{
+    "result": {
+        "RoomId":"A00001",
+        "RoomPrice":"1000",
+        "RoomDeposit":"300",
+        "RoomDescribe":"二七区淮海路绿云小区3室次卧",
+        "RoomImage":"http://d.hiphotos.baidu.com/image/w%3D2048/sign=a11d7b94552c11dfded1b823571f63d0/eaf81a4c510fd9f914eee91e272dd42a2934a4c8.jpg",
+        "Flag":"0021"//用于筛选的标识
+    }
+}

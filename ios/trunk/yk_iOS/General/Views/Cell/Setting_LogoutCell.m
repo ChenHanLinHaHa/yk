@@ -13,6 +13,11 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+- (IBAction)doLogoutAction:(id)sender {
+    if (self.logoutBlock) {
+        self.logoutBlock();
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

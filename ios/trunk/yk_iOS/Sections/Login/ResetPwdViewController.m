@@ -8,7 +8,10 @@
 
 #import "ResetPwdViewController.h"
 
-@interface ResetPwdViewController ()
+@interface ResetPwdViewController () {
+    
+    IBOutlet UITextField *_emailTextField;
+}
 
 @end
 
@@ -17,6 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _emailTextField.text = [UserDefaultManager getObjectForKey:KEmail];
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
+}
+
+- (void)hideKeyboard {
+    [self.view endEditing:YES];
+}
+
+- (IBAction)doResetPwdAction:(id)sender {
+    if (_emailTextField.text.length == 0) {
+        [SVProgressHUD showInfoWithStatus:@"请输入邮箱!" maskType:SVProgressHUDMaskTypeBlack];
+        return;
+    }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [AVOSCloudHelper resetPWDWithEmail:_emailTextField.text withResetPwdResult:^(BOOL isResetSuccess) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (isResetSuccess) {
+            [SVProgressHUD showInfoWithStatus:@"邮件发送成功，请转至邮箱修改密码!" maskType:SVProgressHUDMaskTypeBlack];
+            if (self.resetBlock) {
+                self.resetBlock();
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            [SVProgressHUD showInfoWithStatus:@"邮箱发送失败!" maskType:SVProgressHUDMaskTypeBlack];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

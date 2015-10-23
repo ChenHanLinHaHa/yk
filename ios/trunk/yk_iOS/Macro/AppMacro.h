@@ -45,5 +45,7 @@ typedef enum : int {
 #define CountLimit 5 //一次加载的最大数据条数
 
 #define KShareViewHeight 300
+#define KEmail @"email"
+#define KPassword @"password"
 
 #endif /* AppMacro_h */

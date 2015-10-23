@@ -15,6 +15,7 @@
 #import "Me_RentViewController.h"
 #import "Me_ReverseViewController.h"
 #import "Me_MyRoomViewController.h"
+#import "SettingViewController.h"
 
 @interface Me_RootViewController ()
 @property (nonatomic, strong) NSArray *dataArr;
@@ -26,11 +27,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"settimg_image" showBadge:NO target:self action:@selector(doSettingAction)];
+    
     self.dataArr = @[@[@"详细信息"],@[@"我的房租",@"我的电费"],@[@"我的房间"],@[@"管理员电话:15902168747"]];
 }
 
 - (BOOL)isShowBack {
     return NO;
+}
+
+- (void)doSettingAction {
+    SettingViewController *vc = [kMainStoryboard instantiateViewControllerWithIdentifier:@"SettingViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

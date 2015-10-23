@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
+typedef void(^ResetBlock)();
+
 @interface ResetPwdViewController : BaseViewController
+
+@property (nonatomic, strong) ResetBlock resetBlock;
 
 @end

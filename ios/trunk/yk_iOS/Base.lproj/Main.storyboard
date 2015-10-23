@@ -1211,6 +1211,9 @@
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1b-n1-DcN">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="195"/>
+                                                    </variation>
                                                     <connections>
                                                         <outlet property="delegate" destination="TaF-oh-kYp" id="UBR-0b-Aib"/>
                                                     </connections>
@@ -2364,10 +2367,92 @@
             </objects>
             <point key="canvasLocation" x="2578.5" y="-1392"/>
         </scene>
+        <!--重置密码-->
+        <scene sceneID="pPC-fH-NlE">
+            <objects>
+                <viewController storyboardIdentifier="ResetPwdViewController" id="EEF-Mh-Oym" customClass="ResetPwdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t8G-fE-nKa"/>
+                        <viewControllerLayoutGuide type="bottom" id="5iu-nI-aNS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fGf-NG-8gC">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mz2-Cx-rF4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_username_image" translatesAutoresizingMaskIntoConstraints="NO" id="TI4-DH-mUL">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="4" y="15" width="293" height="40"/>
+                                        </variation>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="ejj-Wg-6H4">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="61" y="20" width="224" height="30"/>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="TI4-DH-mUL"/>
+                                        <exclude reference="ejj-Wg-6H4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="121" width="300" height="96"/>
+                                    <mask key="subviews">
+                                        <include reference="TI4-DH-mUL"/>
+                                        <include reference="ejj-Wg-6H4"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gN-s5-1K1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="重置密码" backgroundImage="login_btn_image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="252" width="290" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doLoginAction:" destination="GUa-sy-Nu8" eventType="touchUpInside" id="IdV-EL-jGf"/>
+                                    <action selector="doResetPwdAction:" destination="EEF-Mh-Oym" eventType="touchUpInside" id="O8I-9f-y3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Mz2-Cx-rF4"/>
+                                <exclude reference="3gN-s5-1K1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Mz2-Cx-rF4"/>
+                                <include reference="3gN-s5-1K1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="重置密码" id="GHH-Uy-LFS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_emailTextField" destination="ejj-Wg-6H4" id="xup-zt-kFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0K-cU-gbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="1287"/>
+        </scene>
         <!--注册-->
         <scene sceneID="d05-DC-qck">
             <objects>
-                <viewController id="iQH-29-fgB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="iQH-29-fgB" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lyG-Ao-GkN"/>
                         <viewControllerLayoutGuide type="bottom" id="aZq-Rf-Vhc"/>
@@ -2375,10 +2460,84 @@
                     <view key="view" contentMode="scaleToFill" id="LTV-Bf-gtR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0o-Mt-MsB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_input_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="1rO-MB-hqZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="4" y="15" width="293" height="96"/>
+                                        </variation>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-rl-QnL">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="61" y="25" width="224" height="30"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="i5J-R9-XAk">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="61" y="72" width="224" height="30"/>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="1rO-MB-hqZ"/>
+                                        <exclude reference="GTb-rl-QnL"/>
+                                        <exclude reference="i5J-R9-XAk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="121" width="300" height="158"/>
+                                    <mask key="subviews">
+                                        <include reference="1rO-MB-hqZ"/>
+                                        <include reference="GTb-rl-QnL"/>
+                                        <include reference="i5J-R9-XAk"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-8U-MYS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="注  册" backgroundImage="login_btn_image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="300" width="290" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doLoginAction:" destination="GUa-sy-Nu8" eventType="touchUpInside" id="vBd-0b-CKA"/>
+                                    <action selector="doRegisterAction:" destination="iQH-29-fgB" eventType="touchUpInside" id="ams-fe-hiT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="s0o-Mt-MsB"/>
+                                <exclude reference="Km2-8U-MYS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="s0o-Mt-MsB"/>
+                                <include reference="Km2-8U-MYS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="NYq-Kw-mhZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_passwordTextField" destination="i5J-R9-XAk" id="ooH-MP-2et"/>
+                        <outlet property="_usernameTextField" destination="GTb-rl-QnL" id="CpX-5E-EfM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6Y-ed-VKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2908,20 +3067,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eti-VX-Kkn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="zGh-Hd-CCM">
-                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_input_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="MoN-Z7-xcK">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="38" y="17" width="203" height="30"/>
+                                            <rect key="frame" x="4" y="15" width="293" height="96"/>
                                         </variation>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Sx-eVN">
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="zGh-Hd-CCM">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="38" y="79" width="203" height="30"/>
+                                            <rect key="frame" x="61" y="25" width="224" height="30"/>
                                         </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-Bg-lD7">
@@ -2932,37 +3089,63 @@
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <rect key="frame" x="21" y="121" width="98" height="37"/>
+                                            <rect key="frame" x="8" y="121" width="98" height="37"/>
                                         </variation>
                                         <connections>
                                             <action selector="doRememberAction:" destination="GUa-sy-Nu8" eventType="touchUpInside" id="BIJ-IN-GTb"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-7m-Jv8">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="忘记密码" image="forget_pwd_image">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="213" y="121" width="83" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="EEF-Mh-Oym" kind="push" identifier="doResetAction" id="h22-Zo-gP1"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" background="textfield_bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Sx-eVN">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="61" y="72" width="224" height="30"/>
+                                        </variation>
+                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="subviews">
+                                        <exclude reference="MoN-Z7-xcK"/>
                                         <exclude reference="zGh-Hd-CCM"/>
-                                        <exclude reference="8bg-Sx-eVN"/>
                                         <exclude reference="3Jn-Bg-lD7"/>
+                                        <exclude reference="Ju6-7m-Jv8"/>
+                                        <exclude reference="8bg-Sx-eVN"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="110" width="280" height="150"/>
+                                    <rect key="frame" x="10" y="110" width="300" height="158"/>
                                     <mask key="subviews">
+                                        <include reference="MoN-Z7-xcK"/>
                                         <include reference="zGh-Hd-CCM"/>
-                                        <include reference="8bg-Sx-eVN"/>
                                         <include reference="3Jn-Bg-lD7"/>
+                                        <include reference="Ju6-7m-Jv8"/>
+                                        <include reference="8bg-Sx-eVN"/>
                                     </mask>
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61h-A0-nQb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="登  录">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="登  录" backgroundImage="login_btn_image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="328" width="193" height="30"/>
+                                    <rect key="frame" x="15" y="328" width="290" height="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="doLoginAction:" destination="GUa-sy-Nu8" eventType="touchUpInside" id="XvL-av-eHy"/>
@@ -2988,6 +3171,7 @@
                     <connections>
                         <outlet property="_loginBtn" destination="61h-A0-nQb" id="fek-MO-lzV"/>
                         <outlet property="_passwordTextField" destination="8bg-Sx-eVN" id="SW3-XN-Z1e"/>
+                        <outlet property="_rememberBtn" destination="3Jn-Bg-lD7" id="JDe-D1-l8L"/>
                         <outlet property="_usernameTextField" destination="zGh-Hd-CCM" id="3zy-mL-aGC"/>
                         <segue destination="iQH-29-fgB" kind="push" id="Ood-y7-uc7"/>
                     </connections>
@@ -3278,6 +3462,7 @@
                         <segue destination="rrF-VQ-ldq" kind="push" id="4av-xb-bbS"/>
                         <segue destination="CB1-oa-Z2a" kind="push" id="6gJ-G9-u6W"/>
                         <segue destination="yLO-kF-V6m" kind="push" id="Caj-Pq-Owe"/>
+                        <segue destination="oUE-Zi-htr" kind="push" id="V4n-mX-Otq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQP-4v-0Om" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3336,6 +3521,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMy-9v-4hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984.5" y="1094"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="odG-Q4-v7k">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="oUE-Zi-htr" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mAf-sF-DS4"/>
+                        <viewControllerLayoutGuide type="bottom" id="8vv-0t-fyV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hDf-fy-Bbq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZIX-jd-LIc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Setting_ContentCell" id="maa-U8-M8o" customClass="Setting_ContentCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="maa-U8-M8o" id="th8-Sl-5WI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Setting_LogoutCell" id="MBi-VR-Yyg" customClass="Setting_LogoutCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBi-VR-Yyg" id="BHS-LJ-GBk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz6-MV-vxN">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.38959768150000001" blue="0.399055457" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="登  出">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="30" y="0.0" width="260" height="44"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="doLogoutAction:" destination="MBi-VR-Yyg" eventType="touchUpInside" id="c34-mq-HZK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="pz6-MV-vxN"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="pz6-MV-vxN"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="oUE-Zi-htr" id="IeE-BJ-VWx"/>
+                                    <outlet property="delegate" destination="oUE-Zi-htr" id="Ifc-da-nNG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZIX-jd-LIc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZIX-jd-LIc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="uq1-RC-pEo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_myTableView" destination="ZIX-jd-LIc" id="1U9-r8-Rwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFc-gK-3D8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162.5" y="1761"/>
         </scene>
         <!--我的余额-->
         <scene sceneID="3vS-8P-WWZ">
@@ -4330,9 +4601,13 @@
         <image name="alipay_image" width="49" height="49"/>
         <image name="cell_shadow" width="366" height="51"/>
         <image name="collection_normal_image" width="19" height="18"/>
+        <image name="forget_pwd_image" width="15" height="15"/>
         <image name="hm_image" width="26" height="25"/>
         <image name="line_image" width="232" height="1"/>
         <image name="location_image" width="12" height="14"/>
+        <image name="login_btn_image" width="290" height="36"/>
+        <image name="login_input_bg_image" width="293" height="96"/>
+        <image name="login_username_image" width="293" height="39"/>
         <image name="my_coupon_logo" width="17" height="16"/>
         <image name="no_collect_image" width="232" height="116"/>
         <image name="pay_normal_image" width="25" height="25"/>
@@ -4350,7 +4625,7 @@
         <image name="tabbar_find_selected_image" width="23" height="20"/>
         <image name="tabbar_geren_normal_image" width="21" height="21"/>
         <image name="tabbar_geren_selected_image" width="21" height="21"/>
-        <image name="textfield_bg_image" width="203" height="48"/>
+        <image name="textfield_bg_image" width="292" height="56"/>
         <image name="weibo_image" width="63" height="63"/>
         <image name="weixin_image" width="63" height="63"/>
         <image name="woman_image" width="22" height="22"/>

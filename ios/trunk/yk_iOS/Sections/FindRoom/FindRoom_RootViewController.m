@@ -80,8 +80,10 @@
     
     WelcomeViewController *welcomeVC = [kMainStoryboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
     [[UIApplication sharedApplication].keyWindow addSubview:welcomeVC.view];
-    UINavigationController *loginNav = [kMainStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
-    [self presentViewController:loginNav animated:YES completion:nil];
+    if ([AVOSCloudHelper isNeedLogin]) {
+        UINavigationController *loginNav = [kMainStoryboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+        [self presentViewController:loginNav animated:YES completion:nil];
+    }
     
     _dataArr = [NSMutableArray array];
     _isHidden = YES;

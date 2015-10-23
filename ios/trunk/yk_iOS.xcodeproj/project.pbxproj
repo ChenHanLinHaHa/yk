@@ -51,6 +51,10 @@
 		B69A91B51BC7656000C946F0 /* Charge_SelectMoneytCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A91B41BC7656000C946F0 /* Charge_SelectMoneytCell.m */; settings = {ASSET_TAGS = (); }; };
 		B69A91B81BC76E3600C946F0 /* Charge_PayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A91B71BC76E3600C946F0 /* Charge_PayCell.m */; settings = {ASSET_TAGS = (); }; };
 		B69A91BB1BC76E4800C946F0 /* Charge_FooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A91BA1BC76E4800C946F0 /* Charge_FooterCell.m */; settings = {ASSET_TAGS = (); }; };
+		B6A550D11BD96D67006FE9D1 /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A550D01BD96D67006FE9D1 /* ResetPwdViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B6A550D41BD97B28006FE9D1 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A550D31BD97B28006FE9D1 /* SettingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B6A550D71BD97E13006FE9D1 /* Setting_ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A550D61BD97E13006FE9D1 /* Setting_ContentCell.m */; settings = {ASSET_TAGS = (); }; };
+		B6A550DA1BD97E26006FE9D1 /* Setting_LogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A550D91BD97E26006FE9D1 /* Setting_LogoutCell.m */; settings = {ASSET_TAGS = (); }; };
 		B6B16AE21BD7D11900AF08EB /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6B16AE11BD7D11900AF08EB /* image_2.jpg */; settings = {ASSET_TAGS = (); }; };
 		B6B16AE51BD8352700AF08EB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B16AE41BD8352700AF08EB /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B6B16AE81BD8359200AF08EB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B16AE71BD8359200AF08EB /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -199,6 +203,14 @@
 		B69A91B71BC76E3600C946F0 /* Charge_PayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Charge_PayCell.m; sourceTree = "<group>"; };
 		B69A91B91BC76E4800C946F0 /* Charge_FooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Charge_FooterCell.h; sourceTree = "<group>"; };
 		B69A91BA1BC76E4800C946F0 /* Charge_FooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Charge_FooterCell.m; sourceTree = "<group>"; };
+		B6A550CF1BD96D67006FE9D1 /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
+		B6A550D01BD96D67006FE9D1 /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
+		B6A550D21BD97B28006FE9D1 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		B6A550D31BD97B28006FE9D1 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		B6A550D51BD97E13006FE9D1 /* Setting_ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting_ContentCell.h; sourceTree = "<group>"; };
+		B6A550D61BD97E13006FE9D1 /* Setting_ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting_ContentCell.m; sourceTree = "<group>"; };
+		B6A550D81BD97E26006FE9D1 /* Setting_LogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting_LogoutCell.h; sourceTree = "<group>"; };
+		B6A550D91BD97E26006FE9D1 /* Setting_LogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting_LogoutCell.m; sourceTree = "<group>"; };
 		B6B16AE11BD7D11900AF08EB /* image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_2.jpg; sourceTree = "<group>"; };
 		B6B16AE31BD8352700AF08EB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B6B16AE41BD8352700AF08EB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -666,6 +678,8 @@
 				B6B16AE41BD8352700AF08EB /* LoginViewController.m */,
 				B6B16AE61BD8359200AF08EB /* RegisterViewController.h */,
 				B6B16AE71BD8359200AF08EB /* RegisterViewController.m */,
+				B6A550CF1BD96D67006FE9D1 /* ResetPwdViewController.h */,
+				B6A550D01BD96D67006FE9D1 /* ResetPwdViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -675,6 +689,8 @@
 			children = (
 				B6CB15071BC6ADE50011BF5E /* Me_RootViewController.h */,
 				B6CB15081BC6ADE50011BF5E /* Me_RootViewController.m */,
+				B6A550D21BD97B28006FE9D1 /* SettingViewController.h */,
+				B6A550D31BD97B28006FE9D1 /* SettingViewController.m */,
 				B6CB15181BC6E5CB0011BF5E /* Me_InfoViewController.h */,
 				B6CB15191BC6E5CB0011BF5E /* Me_InfoViewController.m */,
 				B6CB15211BC6EA9E0011BF5E /* Me_BalanceViewController.h */,
@@ -771,6 +787,10 @@
 				B68AFC3D1BCAAB0800CACC86 /* Reverse_CountdownCell.m */,
 				B68ADC741BCFFA600080F6E0 /* MyRoomCell.h */,
 				B68ADC751BCFFA600080F6E0 /* MyRoomCell.m */,
+				B6A550D51BD97E13006FE9D1 /* Setting_ContentCell.h */,
+				B6A550D61BD97E13006FE9D1 /* Setting_ContentCell.m */,
+				B6A550D81BD97E26006FE9D1 /* Setting_LogoutCell.h */,
+				B6A550D91BD97E26006FE9D1 /* Setting_LogoutCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -987,16 +1007,20 @@
 				B6CB15231BC6EA9E0011BF5E /* Me_BalanceViewController.m in Sources */,
 				B6CB15261BC6EE2B0011BF5E /* Me_CouponViewController.m in Sources */,
 				B68AFC3E1BCAAB0800CACC86 /* Reverse_CountdownCell.m in Sources */,
+				B6A550D11BD96D67006FE9D1 /* ResetPwdViewController.m in Sources */,
 				B678856A1BC8CC48009E7320 /* FindRoomRoot_ContentCell.m in Sources */,
 				B6CB153B1BC6F6380011BF5E /* Rent_FooterCell.m in Sources */,
 				B6CB15511BC710950011BF5E /* PaymentResultViewController.m in Sources */,
 				B69A91B51BC7656000C946F0 /* Charge_SelectMoneytCell.m in Sources */,
 				B68AFC571BCAE53F00CACC86 /* RoomDetail_BaseInfoCell.m in Sources */,
 				B68E319C1BC82F4300E63A95 /* CouponCell.m in Sources */,
+				B6A550D41BD97B28006FE9D1 /* SettingViewController.m in Sources */,
+				B6A550DA1BD97E26006FE9D1 /* Setting_LogoutCell.m in Sources */,
 				B68AFC4B1BCABA9900CACC86 /* RoomDetail_HeaderPictureCell.m in Sources */,
 				B6BB28C31BD2D658004F55B6 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				B61FABA71BCC252C00BC1508 /* RoomDetail_AddressCell.m in Sources */,
 				B6CB15091BC6ADE50011BF5E /* Me_RootViewController.m in Sources */,
+				B6A550D71BD97E13006FE9D1 /* Setting_ContentCell.m in Sources */,
 				B68AFC631BCAFBDE00CACC86 /* RoomDetail_RoomsStateCell.m in Sources */,
 				B69A91AF1BC764DB00C946F0 /* Charge_HeaderCell.m in Sources */,
 				B68E31891BC7FE3100E63A95 /* Charge_InputMoneyCollectionCell.m in Sources */,

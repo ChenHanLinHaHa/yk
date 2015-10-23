@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^LogoutBlock)(void);
+
 @interface Setting_LogoutCell : UITableViewCell
+
+@property (nonatomic, strong) LogoutBlock logoutBlock;
 
 @end

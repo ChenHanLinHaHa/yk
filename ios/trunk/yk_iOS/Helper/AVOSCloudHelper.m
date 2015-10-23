@@ -123,4 +123,71 @@
     }];
 }
 
+
+
+
++(BOOL)isNeedLogin {
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser == nil) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
++(BOOL)logout {
+    [AVUser logOut];
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser == nil) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+//登录
++(void)loginWithUsename:(NSString *)username withPassword:(NSString *)password withLoginResultBlock:(LoginResultBlock)block {
+    [AVUser logInWithUsernameInBackground:@"username" password:@"password" block:^(AVUser *user, NSError *error) {
+        if (user != nil) {
+            block(YES,NULL);
+        } else {
+            block(NO,error.code);
+        }
+    }];
+}
+//注册
++(void)registerWithUsername:(NSString *)username withPassword:(NSString *)password withEmail:(NSString *)email withRegisterResultBlock:(RegisterResultBlock)block {
+    AVUser *user = [AVUser user];
+    user.username = username;
+    user.password = password;
+    user.email = email;
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            block(YES,NULL,username,password,email);
+        } else {
+            block(NO,error.code,nil,nil,nil);
+        }
+    }];
+}
+//重置密码
++(void)resetPWDWithEmail:(NSString *)email withResetPwdResult:(ResetPWDResultBlock)block {
+    [AVUser requestPasswordResetForEmailInBackground:email block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            block(YES);
+        } else {
+            block(NO);
+        }
+    }];
+}
+//修改密码
++(void)modifyPWDWithUsername:(NSString *)username withOldPassword:(NSString *)password withNewPassword:(NSString *)newPassword withModifyPwdBlock:(ModifyPWDResultBlock)block {
+    [AVUser logInWithUsername:username password:password]; //请确保用户当前的有效登录状态
+    [[AVUser currentUser] updatePassword:password newPassword:newPassword block:^(id object, NSError *error) {
+        //处理结果
+        if (!error) {
+            block(YES,newPassword);
+        } else {
+            block(NO,nil);
+        }
+    }];
+}
+
 @end
